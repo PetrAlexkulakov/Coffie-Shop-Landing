@@ -1,0 +1,128 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  color: #fff;
+  transition: background 0.25s, box-shadow 0.25s;
+}
+
+.solid {
+  background: var(--ink);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav a {
+  opacity: 0.85;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.nav a:hover {
+  opacity: 1;
+  color: var(--accent);
+}
+
+.burger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin-inline: auto;
+  background: currentColor;
+  transition: transform 0.25s, background 0.25s;
+}
+
+.burger span {
+  position: relative;
+}
+
+.burger span::before,
+.burger span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.burger span::before {
+  top: -7px;
+}
+
+.burger span::after {
+  top: 7px;
+}
+
+.burger .burgerOpen {
+  background: transparent;
+}
+
+.burger .burgerOpen::before {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger .burgerOpen::after {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 760px) {
+  .burger {
+    display: block;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 72px 0 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 24px var(--gutter);
+    background: var(--ink);
+    font-family: var(--font-serif), Georgia, serif;
+    font-size: 28px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, visibility 0.2s;
+  }
+
+  .nav a {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .navOpen {
+    visibility: visible;
+    opacity: 1;
+  }
+}

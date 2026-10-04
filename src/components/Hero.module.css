@@ -1,0 +1,54 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 100svh;
+  padding-block: 120px clamp(56px, 10vw, 112px);
+  color: #fff;
+  background: var(--ink);
+  overflow: hidden;
+}
+
+.bg {
+  object-fit: cover;
+  object-position: 45% center;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, rgba(20, 17, 15, 0.92) 0%, rgba(20, 17, 15, 0.45) 55%, rgba(20, 17, 15, 0.35) 100%),
+    linear-gradient(to right, rgba(20, 17, 15, 0.6), transparent 70%);
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.title {
+  max-width: 14ch;
+  font-size: clamp(44px, 9vw, 92px);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.title em {
+  font-style: italic;
+  color: #e8b878;
+}
+
+.lead {
+  max-width: 520px;
+  font-size: clamp(17px, 2vw, 19px);
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 36px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
