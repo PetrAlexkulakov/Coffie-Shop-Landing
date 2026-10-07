@@ -37,12 +37,12 @@ export const mapQuery = encodeURIComponent(
 export type Day = { day: string; open?: string; close?: string; note?: string };
 
 export const hours: Day[] = [
-  { day: "Monday", open: "09:30", close: "14:00", note: "Takeaway brews" },
-  { day: "Tuesday" },
-  { day: "Wednesday" },
-  { day: "Thursday" },
-  { day: "Friday" },
-  { day: "Saturday" },
+  { day: "Monday", open: "08:00", close: "20:00" },
+  { day: "Tuesday", open: "08:00", close: "20:00" },
+  { day: "Wednesday", open: "08:00", close: "20:00" },
+  { day: "Thursday", open: "08:00", close: "20:00" },
+  { day: "Friday", open: "08:00", close: "20:00" },
+  { day: "Saturday", open: "08:00", close: "20:00" },
   { day: "Sunday" },
 ];
 
