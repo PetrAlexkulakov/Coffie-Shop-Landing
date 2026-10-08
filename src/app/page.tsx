@@ -41,9 +41,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
+        <Hours />
         <About />
         <Menu />
-        <Hours />
         <Location />
       </main>
       <Contact />

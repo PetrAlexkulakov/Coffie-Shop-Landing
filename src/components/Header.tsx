@@ -6,9 +6,9 @@ import { site } from "@/data/site";
 import styles from "./Header.module.css";
 
 const links = [
+  { href: "#hours", label: "Hours" },
   { href: "#about", label: "About" },
   { href: "#menu", label: "Menu" },
-  { href: "#hours", label: "Hours" },
   { href: "#visit", label: "Visit" },
   { href: "#contact", label: "Contact" },
 ];
