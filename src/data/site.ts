@@ -6,7 +6,7 @@ export const site = {
   description:
     "Independent specialty coffee roastery in Morpeth, Northumberland. Small-batch roasting, ethically sourced beans and takeaway brews straight from the roaster.",
   // Replace with the final domain once it is connected (used for SEO / Open Graph).
-  url: "https://www.northsidecoffee.co",
+  url: "https://northsidecoffeeroasters.com",
   established: 2020,
 
   contact: {

@@ -1,3 +1,11 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.northsidecoffeeroasters.com" }],
+      "destination": "https://northsidecoffeeroasters.com/:path*",
+      "permanent": true
+    }
+  ]
 }
